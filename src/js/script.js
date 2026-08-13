@@ -39,3 +39,19 @@ const interval = setInterval(() => {
         console.log("O intervalo foi removido")
     };
 }, 1000);   
+
+
+const eventoFuturo = (res) =>{
+    return new Promise((resolve, reject) => {
+        // if(res === true){
+        //     resolve("Promessa Resolvida")
+        // }else{
+        //     reject("Promessa Rejeitada")
+        // };
+        setTimeout(() => {
+            res ? resolve("Promessa resolvida") : reject("Promessa rejeitada")
+        },2000)
+    });
+};
+console.log(eventoFuturo(true));
+console.log(eventoFuturo(false));
